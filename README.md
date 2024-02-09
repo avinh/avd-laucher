@@ -16,40 +16,46 @@ A frontend UI for launching Android Virtual Devices (avd) in the legacy window w
 
 ![Screenshot](./_docs/screenshots/head.png)
 
-## Build from source
 
-Reminder: If you simply want to use it instead of building it, download it from releases.
+## Build Instruction
 
-First create an empty directory, and then create `resources/app/` under that. Place the source in `resources/app/`.
+### Install NPM package globally
 
-Open `app` directory and initialize.
+### Dev
 
-```plain
-npm update
+``` bash
+npm start
 ```
 
-To test the source, run
+#### For macOS and Linux
 
-```plain
-npm run start
+``` bash
+# install dependencies
+npm install --save-dev
+# or
+yarn install -D
 ```
 
-To build the distributable, run
+### Package application
 
-```plain
-npm run make
+#### For macOS and Linux
+``` bash
+npm run dist
+#or 
+yarn dist
 ```
-
-You can find binaries in `out/`.
 
 ## Setup
 
 Before you can use AVD Launcher, you should install **Android Command-line Tools** using the SDK manager in Android Studio.
 
-Put the executables under an empty directory, and start `avd-launcher.exe` to use.
+Put the executables under an empty directory, and start `avd-launcher` to use.
 
 You may see an error. In that case, check settings and set them correctly.
 
 ![](./_docs/screenshots/check_settings.png)
 
 Hint: The target program executed is something like `d:/android_sdk/cmdline-tools/latest/bin/avdmanager`.
+
+## Require 
+install java sdk and jre 18
